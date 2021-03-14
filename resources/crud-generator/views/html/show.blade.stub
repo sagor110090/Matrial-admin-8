@@ -1,0 +1,39 @@
+@extends('layouts.app',['pageTitle' => __('%%modelName%% Show')])
+
+@section('content')
+
+            <div class="col-md-12">
+
+                <div class="card">
+                    @component('layouts.parts.breadcrumb')
+                        @slot('title')
+                            {{ __('%%modelName%% Show') }}
+                        @endslot
+                        @slot('subTitle')
+                            {{ __('%%modelName%%') }}
+                        @endslot
+                    @endcomponent
+
+                    <div class="card-body">
+
+                        <a href="{{ url('/%%routeGroup%%%%viewName%%') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="material-icons">keyboard_backspace</i> Back</button></a>
+
+                        <br/>
+                        <br/>
+
+                        <div class="table-responsive">
+                            <table class="table">
+                                <tbody>
+                                    <tr>
+
+                                    </tr>
+                                    %%formBodyHtmlForShowView%%
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+@endsection
