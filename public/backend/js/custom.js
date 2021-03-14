@@ -234,3 +234,18 @@ $(document).ready(function () {
             $(this).parents().addClass("active");
     })
 })
+
+// Add class disableonsubmit to your form
+$(document).ready(function () {
+    $('form.disableonsubmit').submit(function(e) {
+        if ($(this).data('submitted') === true) {
+            // Form is already submitted
+            console.log('Form is already submitted, waiting response.');
+            // Stop form from submitting again
+            e.preventDefault();
+        } else {
+            // Set the data-submitted attribute to true for record
+            $(this).data('submitted', true);
+        }
+    });
+});

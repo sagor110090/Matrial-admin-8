@@ -15,7 +15,7 @@
                     @endcomponent
 
                     <div class="card-body">
-                        <a href="{{ url('/admin/posts') }}" title="Back"><button class="btn btn-warning btn-sm"><i class="material-icons">keyboard_backspace</i> Back</button></a>
+                        <a href="{{ url('/admin/posts') }}"  title="Back"><button class="btn btn-warning btn-sm"><i class="material-icons">keyboard_backspace</i> Back</button></a>
                         <br />
                         <br />
 
@@ -27,7 +27,7 @@
                             </ul>
                         @endif
 
-                        <form method="POST" action="{{ url('/admin/posts') }}" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data">
+                        <form method="POST" action="{{ url('/admin/posts') }}" accept-charset="UTF-8" class="form-horizontal disableonsubmit" enctype="multipart/form-data">
                             {{ csrf_field() }}
 
                             @include ('admin.posts.form', ['formMode' => 'create'])
