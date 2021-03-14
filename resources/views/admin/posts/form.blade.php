@@ -6,7 +6,7 @@
 </div>
 <div class="form-group {{ $errors->has('content') ? 'has-error' : ''}}">
     <label for="content" class="bmd-label-floating">{{ 'Content' }}</label>
-    <textarea class="form-control" rows="5" name="content" type="textarea" id="content" >{{ isset($post->content) ? $post->content : old('content')}}</textarea>
+    <textarea class="form-control" rows="5" name="content" type="textarea" id="content" required>{{ isset($post->content) ? $post->content : old('content')}}</textarea>
 
     {!! $errors->first('content', '<p class="help-block">:message</p>') !!}
 </div>
